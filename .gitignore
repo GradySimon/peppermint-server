@@ -51,3 +51,5 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Don't commit the secrets
+peppermint/secrets.py
