@@ -1,3 +1,4 @@
+from rest_framework import serializers
 from peppermint_server.models import UserProfile, Topic
 
 class UserProfileSerializer(serializers.ModelSerializer):
