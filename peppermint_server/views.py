@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from peppermint_server.models import UserProfile, Topic
 from peppermint_server.serializers import UserProfileSerializer, TopicSerializer
 from rest_framework.views import APIView
@@ -20,3 +21,9 @@ class TopicList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class UserProfileDetail(APIView):
+    def get(self, request, pk, format=None):
+        user_profile = get_object_or_404(UserProfile, pk=pk)
+        serializer = UserProfileSerializer(user_profile)
+        return Response(serializer.data)
+        
