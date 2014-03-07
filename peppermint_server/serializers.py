@@ -7,7 +7,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
         fields = ('id', 'first_name', 'last_name')
 
 class TopicSerializer(serializers.ModelSerializer):
-    author_id = serializers.PrimaryKeyRelatedField(source='author', many=False, read_only=True)
+    author_id = serializers.PrimaryKeyRelatedField(source='author', many=False)
 
     class Meta:
         model = Topic
