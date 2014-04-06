@@ -57,3 +57,7 @@ peppermint/secrets.py
 # Or the Sublime project files
 peppermint-server.sublime-project
 peppermint-server.sublime-workspace
+
+# server stuff
+.swp
+include/
